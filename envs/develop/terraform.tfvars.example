@@ -1,0 +1,28 @@
+# Ejemplo de archivo de variables para el entorno de desarrollo
+# Copia este archivo a terraform.tfvars y completa los valores
+
+project_id = "myapp-dev"
+region     = "us-central1"
+
+# Billing (requerido si se crea proyecto nuevo)
+billing_account_id = "01XXXX-XXXXXX-XXXXXX"
+
+# Labels
+owner       = "devfest-team"
+cost_center = "workshop"
+
+# Base de datos
+db_name     = "strapi_db"
+db_user     = "strapi_user"
+db_password = "ChangeMe123!" # ⚠️ Cambiar por una contraseña segura
+
+# Imágenes de contenedores (placeholders, usar imágenes reales)
+backend_image  = "gcr.io/myapp-dev/strapi:latest"
+frontend_image = "gcr.io/myapp-dev/nextjs:latest"
+
+# Cloudflare (opcional)
+# cloudflare_zone_id   = "your-zone-id"
+# cloudflare_api_token = "your-api-token"
+# domain_name          = "devfest-demo.mydomain.com"
+# environment_subdomain = "develop"
+
