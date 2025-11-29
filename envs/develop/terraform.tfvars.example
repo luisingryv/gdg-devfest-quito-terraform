@@ -1,7 +1,7 @@
 # Ejemplo de archivo de variables para el entorno de desarrollo
 # Copia este archivo a terraform.tfvars y completa los valores
 
-project_id = "myapp-dev"
+project_id = "myapp-dev-479715"
 region     = "us-central1"
 
 # Billing (requerido si se crea proyecto nuevo)
@@ -17,8 +17,8 @@ db_user     = "strapi_user"
 db_password = "ChangeMe123!" # ⚠️ Cambiar por una contraseña segura
 
 # Imágenes de contenedores (placeholders, usar imágenes reales)
-backend_image  = "gcr.io/myapp-dev/strapi:latest"
-frontend_image = "gcr.io/myapp-dev/nextjs:latest"
+backend_image  = "gcr.io/myapp-dev-479715/strapi:latest"
+frontend_image = "gcr.io/myapp-dev-479715/nextjs:latest"
 
 # Cloudflare (opcional)
 # cloudflare_zone_id   = "your-zone-id"

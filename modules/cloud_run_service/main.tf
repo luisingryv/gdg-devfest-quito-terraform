@@ -23,8 +23,9 @@ resource "google_service_account" "cloud_run_sa" {
 }
 
 # Permisos para Cloud SQL si se necesita
+# Usamos una variable booleana para evitar dependencias de valores calculados durante el plan
 resource "google_project_iam_member" "cloud_sql_client" {
-  count   = var.cloud_sql_connection_name != "" ? 1 : 0
+  count   = var.enable_cloud_sql_access ? 1 : 0
   project = var.project_id
   role    = "roles/cloudsql.client"
   member  = "serviceAccount:${var.service_account_email != "" ? var.service_account_email : google_service_account.cloud_run_sa[0].email}"

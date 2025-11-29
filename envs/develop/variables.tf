@@ -1,7 +1,7 @@
 variable "project_id" {
   description = "ID del proyecto GCP para desarrollo"
   type        = string
-  default     = "myapp-dev"
+  default     = "myapp-dev-479715"
 }
 
 variable "project_name" {

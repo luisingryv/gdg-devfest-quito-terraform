@@ -48,7 +48,7 @@ resource "google_vpc_access_connector" "connector" {
   name          = "${var.environment}-vpc-connector"
   region        = var.region
   project       = var.project_id
-  network       = var.use_default_vpc ? data.google_compute_network.default[0].name : google_compute_network.vpc[0].name
+  # Nota: Cuando se especifica subnet, no se debe especificar network (se infiere automáticamente)
   subnet {
     name = google_compute_subnetwork.subnet.name
   }

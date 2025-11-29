@@ -94,6 +94,12 @@ variable "cloud_sql_connection_name" {
   default     = ""
 }
 
+variable "enable_cloud_sql_access" {
+  description = "Habilitar acceso a Cloud SQL (usar true si cloud_sql_connection_name está configurado)"
+  type        = bool
+  default     = false
+}
+
 variable "allow_unauthenticated" {
   description = "Permitir invocación sin autenticación (para Load Balancer público)"
   type        = bool

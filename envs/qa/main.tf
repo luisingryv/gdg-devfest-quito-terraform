@@ -124,8 +124,9 @@ module "cloud_run_backend" {
   cpu_limit     = var.backend_cpu_limit
   memory_limit  = var.backend_memory_limit
 
-  vpc_connector_name      = module.networking.vpc_connector_name
+  vpc_connector_name        = module.networking.vpc_connector_name
   cloud_sql_connection_name = module.cloud_sql.connection_name
+  enable_cloud_sql_access   = true # Habilitar acceso a Cloud SQL
 
   environment_variables = {
     NODE_ENV     = "production"
